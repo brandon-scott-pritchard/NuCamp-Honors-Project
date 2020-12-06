@@ -1,0 +1,3 @@
+NPM to load with each project:
+
+brew install git

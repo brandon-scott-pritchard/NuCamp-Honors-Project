@@ -1,0 +1,59 @@
+$color-primary: #030032;
+$color-accent: #EC6600;
+$color-dark: #000000;
+$color-light: #ffffff;
+$color-gray1: #E0E0E6;
+$color-gray2: #C0C0CC;
+$color-gray3: #B1B0C0;
+$color-gray4: #A1A0B3;
+
+.navbar {
+    margin: 0px;
+    a {
+        color: $color-light;
+    }
+    a:hover{
+        color: $color-accent;   
+    }
+    a:active {
+        color: $color-gray3;
+    }
+    background: $color-primary;
+    
+}
+
+body {
+    background: $color-light;
+}
+
+.page-top {
+    background: $color-light;
+    height: 57vh;
+}
+
+.page-bottom {
+    background: $color-gray1;
+    height: 23vh;
+}
+
+footer {
+    background: $color-gray1;
+    height: 10vh;
+    .footer-menu {
+        li {
+            display: inline-block;
+            margin-top: 5vh;
+            color: $color-gray4;
+            a {
+                color: $color-gray4;
+            }
+            a:hover {
+                color: $color-accent;
+            }
+            a:active {
+                color: $color-primary;
+            }
+        }
+        text-align: center;
+    }
+}

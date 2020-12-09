@@ -1,2 +1,36 @@
-.navbar-brand { float: none; }
-.navbar-center { position: absolute; width: 100%; text-align: center; margin: auto; height:100%; }
+.navbar {
+  margin: 0px;
+  background: #030032; }
+  .navbar a {
+    color: #ffffff; }
+  .navbar a:hover {
+    color: #EC6600; }
+  .navbar a:active {
+    color: #B1B0C0; }
+
+body {
+  background: #ffffff; }
+
+.page-top {
+  background: #ffffff;
+  height: 57vh; }
+
+.page-bottom {
+  background: #E0E0E6;
+  height: 23vh; }
+
+footer {
+  background: #E0E0E6;
+  height: 10vh; }
+  footer .footer-menu {
+    text-align: center; }
+    footer .footer-menu li {
+      display: inline-block;
+      margin-top: 5vh;
+      color: #A1A0B3; }
+      footer .footer-menu li a {
+        color: #A1A0B3; }
+      footer .footer-menu li a:hover {
+        color: #EC6600; }
+      footer .footer-menu li a:active {
+        color: #030032; }

@@ -1,3 +1,48 @@
 NPM to load with each project:
 
+To install jquery: npm install jquery --save.
+To install popper js: npm install popper.js --save.
+To install bootstrap 4: npm install ngx-bootstrap bootstrap@4.1.1.
+
 brew install git
+npm init
+npm install lite-server@2.5.4 --save-dev
+    -> npm lite viewer
+
+scripts:    "start": "npm run watch:all",
+            "lite": "lite-server",
+            "scss": "node-sass -o css/ css/",
+            "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+            "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
+            "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+            "imagemin": "imagemin img/* -o dist/img",
+            "clean": "rimraf dist",
+            "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+             "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+
+            **** NOTE ON "USEMIN": CHANGE CODE FOR ALL PAGES IN SITE. NEEDS TO BE UPDATED IN PACKAGE.JSON ****
+
+npm install --save-dev node-sass@4.14.1
+    -> Allows for "npm run scss" to convert scss to css
+
+npm install --save-dev onchange@7.0.0
+    -> watches for changes to scss
+
+npm install --save-dev -E parallelshell@3.0.1
+    -> runs onchange & lite at same time
+
+npm install --save-dev copyfiles@2.2.0
+    -> copies selected files in dist folder
+
+sudo npm install imagemin-cli@5.1.0 --save-dev --unsafe-perm=true --allow-root
+    -> image minifier
+
+npm install --save-dev usemin-cli@0.6.0
+    -> installs clean-css and uglify-js to decrease code size for distribution
+
+npm install --save-dev rimraf@3.0.2
+    -> cleans up dist folder (deletes and replaces each time program is run)
+
+Commands:
+
+npm run build : runs build automation to prepare site for distribution.
